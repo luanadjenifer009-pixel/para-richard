@@ -1,116 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Richard - Missão Especial</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#11111b"><title>Uma missão para Richard ⚔️❤️</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#07070e;font-family:sans-serif;color:#fff;display:flex;justify-content:center}
-.phone{width:100%;max-width:440px;background:#11162a;min-height:100vh}
-.bar{background:#ff2a6d;padding:12px;text-align:center;font-weight:700;font-size:13px}
-.score{display:flex;justify-content:space-between;padding:10px 16px;background:#0e1222;font-size:12px;color:#8ec8ff;position:sticky;top:0;z-index:10}
-.scene{display:none}.scene.active{display:block}
-.img{height:420px;background-size:cover;background-position:center top;display:flex;align-items:flex-end;position:relative}
-.img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,#11162a 30%,transparent 70%)}
-.name{position:relative;z-index:2;margin:0 0 15px 15px;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700}
-.dialog{padding:22px}
-.dialog p{font-size:14.5px;line-height:1.7;color:#e6e8ff;margin-bottom:12px}
-.btn{background:#232f5a;border:1px solid #4a5fbf;color:#fff;padding:16px;border-radius:26px;font-weight:600;width:100%;margin-top:10px;text-align:left;font-size:14px;line-height:1.5}
-.btn-next{background:#ff2a6d;border-color:#ff2a6d;text-align:center;display:none;margin-top:14px;font-weight:700}
-.resposta{display:none;background:#1c274e;border:1px solid #5a7ac5;border-radius:14px;padding:16px;margin-top:16px}
-.final-box{background:linear-gradient(180deg,#2a1a3a,#11162a);border-radius:18px;padding:22px;border:1px solid #ff7eb3;margin-top:10px}
-</style>
-</head>
-<body>
-<div class="phone">
-<div class="bar">⚔️ MISSÃO ESPECIAL: VOCÊ MERECE SER FELIZ, LUANA!</div>
-<div class="score"><span>❤️ <b id="pts">1/8</b></span><span>Interrogatório</span></div>
-
-<div class="scene active" id="s1">
-<div class="img" style="background-image:url('IMG-20261025-WA0076.jpg')"><div class="name" style="background:#4a90e2">🌊 1. GIYU TOMIOKA — O teste de confiança</div></div>
-<div class="dialog">
-<p><b>Cenário:</b> Tomioka aparece com os braços cruzados, olhando seriamente para Richard.</p>
-<p><b>Tomioka:</b> "Richard, quero conversar com você sobre uma pessoa muito importante. A Luana. Talvez você já saiba disso, mas amar alguém não significa apenas gostar da pessoa quando tudo está tranquilo. Também significa aprender a ouvi-la quando ela está triste, ter paciência quando ela não consegue explicar o que sente e lembrar que vocês estão do mesmo lado, mesmo quando discordam.<br><br>Então, vou perguntar diretamente: se a Luana estivesse passando por um dia difícil, precisasse conversar com você e não soubesse direito como explicar o que está sentindo, o que você faria? Você tentaria entender o que está acontecendo ou esperaria que ela conseguisse resolver tudo sozinha?"</p>
-<div id="c1">
-<button class="btn" onclick="R(1,'🌊 Tomioka fica em silêncio por alguns segundos e depois faz um pequeno aceno com a cabeça.<br><br>— Essa é uma boa resposta. Nem sempre precisamos encontrar uma solução imediatamente. Às vezes, escutar com atenção já é uma maneira importante de demonstrar amor. Espero que você consiga colocar isso em prática quando ela precisar de você.',2)">A) "Eu ficaria com ela, escutaria com paciência e tentaria entender o que está acontecendo, mesmo que ela demorasse para conseguir explicar."</button>
-<button class="btn" onclick="R(1,'🌊 — Uma conversa precisa ter espaço para os dois — diz Tomioka. — É importante que você escute o que ela sente e também consiga falar sobre o que você sente. Não transformem uma dificuldade em uma disputa para descobrir quem está certo.',2)">B) "Eu tentaria ajudar, mas também explicaria que precisamos conversar com calma para entender o problema juntos."</button>
-<button class="btn" onclick="R(1,'🌊 — Dar um tempo pode ajudar, desde que ela não pense que você simplesmente desapareceu quando ela precisou de você. Explique que quer conversar depois, combine um momento e cumpra o que prometeu.',2)">C) "Eu esperaria ela se acalmar e depois tentaria conversar com ela."</button>
-</div>
-<div class="resposta" id="r1"><p id="t1"></p><button class="btn btn-next" id="n1" onclick="N(2)">Próximo Hashira →</button></div>
-</div></div>
-
-<div class="scene" id="s2">
-<div class="img" style="background-image:url('IMG-20261025-WA0077.jpg')"><div class="name" style="background:#c77dff">🦋 2. SHINOBU KOCHO — Você vai cuidar do coração dela?</div></div>
-<div class="dialog">
-<p><b>Cenário:</b> Shinobu surge com seu sorriso delicado, mas seu olhar demonstra que ela está prestando atenção em cada palavra.</p>
-<p><b>Shinobu:</b> "Richard, querido, posso fazer uma perguntinha? Prometo que vou tentar não ser assustadora… muito. ♡<br><br>A Luana é uma pessoa que tem sentimentos, inseguranças, sonhos e momentos em que pode precisar de carinho e compreensão. Ela não vai acertar sempre, assim como você também não vai. E nenhum relacionamento é feito por duas pessoas que nunca cometem erros.<br><br>Agora, imagine que vocês tiveram um desentendimento. Depois, a Luana percebe que também errou, pede desculpas e tenta se aproximar de você, mas ainda está com medo de que vocês continuem distantes. O que você faria para mostrar que deseja resolver as coisas com ela?"</p>
-<div id="c2">
-<button class="btn" onclick="R(2,'🦋 Shinobu sorri um pouquinho mais.<br><br>— Ora, ora! Uma resposta bastante sensata. O amor não elimina os desentendimentos, mas pode ajudar duas pessoas a enfrentá-los com respeito. Só não se esqueça de que as atitudes precisam acompanhar as palavras, Richard. ♡',3)">A) "Eu conversaria com ela, explicaria o que senti e mostraria que podemos resolver nossos problemas sem deixar de nos amar."</button>
-<button class="btn" onclick="R(2,'🦋 — Uma pausa pode ser útil quando os sentimentos estão intensos. Mas lembre-se de explicar isso com carinho, em vez de deixar a outra pessoa sem saber o que está acontecendo. Um pouquinho de clareza pode evitar muita preocupação desnecessária.',3)">B) "Eu daria um tempo para nós dois respirarmos e depois procuraria ela para conversar."</button>
-<button class="btn" onclick="R(2,'🦋 — Excelente! Investigar antes de julgar é uma habilidade muito importante, tanto para um caçador quanto para um namorado. Ouça o lado dela, explique o seu e não transforme uma suposição em uma certeza.',3)">C) "Eu tentaria descobrir o que realmente aconteceu antes de tirar conclusões sobre ela."</button>
-</div>
-<div class="resposta" id="r2"><p id="t2"></p><button class="btn btn-next" id="n2" onclick="N(3)">Próximo →</button></div>
-</div></div>
-
-<div class="scene" id="s3">
-<div class="img" style="background-image:url('IMG-20261025-WA0074.jpg')"><div class="name" style="background:#ff7a00">🔥 3. KYOJURO RENGOKU — A promessa que você faria a ela</div></div>
-<div class="dialog">
-<p><b>Cenário:</b> Rengoku aparece com um sorriso enorme e uma energia que praticamente toma conta da tela.</p>
-<p><b>Rengoku:</b> "RICHARD! PRESTE BASTANTE ATENÇÃO À MINHA PERGUNTA!<br><br>Imagine que a Luana está olhando para o futuro de vocês e tem vários sonhos no coração. Ela deseja construir uma história bonita ao seu lado, viver momentos felizes, superar dificuldades e continuar conhecendo você cada vez mais. Entretanto, ela também sabe que a vida não será perfeita e que vocês terão muito a aprender.<br><br>Diante disso, eu lhe pergunto: que tipo de namorado você deseja ser para ela? Aquele que promete coisas grandiosas, mas se esquece delas depois, ou aquele que demonstra seu amor nas pequenas atitudes de todos os dias?"</p>
-<div id="c3">
-<button class="btn" onclick="R(3,'🔥 — EXCELENTE, RICHARD! UMA PROMESSA SE TORNA AINDA MAIS VALIOSA QUANDO É ACOMPANHADA DE ATITUDES!<br><br>Rengoku ergue o punho, entusiasmado.<br><br>— Não é necessário ter todo o futuro planejado agora. O importante é agir com sinceridade, responsabilidade e coragem para continuar crescendo ao lado de quem você ama!',4)">A) "Quero demonstrar meu amor nas atitudes, cumprir o que prometo e construir nosso futuro junto com ela, um passo de cada vez."</button>
-<button class="btn" onclick="R(3,'🔥 — MUITO BEM! Você não precisa resolver todos os problemas do mundo para ser um bom namorado! Às vezes, apoiar, incentivar e caminhar ao lado dela já significa muito. Lembre-se: vocês são duas pessoas construindo uma relação, não um herói responsável por salvar a outra pessoa de tudo!',4)">B) "Quero fazê-la feliz, mesmo sabendo que não vou conseguir resolver todos os problemas dela."</button>
-<button class="btn" onclick="R(3,'🔥 — MAGNÍFICO! Reconhecer que ainda podemos aprender é uma atitude corajosa! Que vocês tenham disposição para conversar, reconhecer os erros e celebrar cada pequena conquista juntos!',4)">C) "Quero continuar aprendendo a amar melhor, porque sei que ainda tenho coisas para melhorar."</button>
-</div>
-<div class="resposta" id="r3"><p id="t3"></p><button class="btn btn-next" id="n3" onclick="N(4)">Próximo →</button></div>
-</div></div>
-
-<div class="scene" id="s4">
-<div class="img" style="background-image:url('IMG-20261025-WA0075.jpg')"><div class="name" style="background:#ff4d8a">💗 4. MITSURI KANROJI — Você vai fazê-la feliz?</div></div>
-<div class="dialog">
-<p><b>Cenário:</b> Mitsuri aparece com os olhos brilhando de curiosidade. Ela junta as mãos diante do peito, animada para ouvir a resposta.</p>
-<p><b>Mitsuri:</b> "Richard, posso fazer uma pergunta sobre a Luana? É que eu acho tão bonito quando duas pessoas gostam uma da outra e querem construir uma história juntas! 💗<br><br>Imagine que ela preparou uma surpresa para você, passou um tempão pensando em cada detalhe e ficou toda ansiosa para descobrir sua reação. Talvez não tenha ficado exatamente como ela imaginou, mas foi feita com muito carinho. O que você faria?<br><br>E tem mais uma coisa! Você entende que fazer a Luana feliz não significa nunca discordar dela, mas tratá-la com carinho, respeitar seus sentimentos e também permitir que ela conheça os seus?"</p>
-<div id="c4">
-<button class="btn" onclick="R(4,'💗 — AAAAAH, QUE FOFO! 💗<br><br>Mitsuri praticamente começa a brilhar de felicidade.<br><br>— Richard, você não precisa de uma surpresa perfeita para reconhecer o amor que existe por trás dela! Tenho certeza de que demonstrar gratidão e carinho pode tornar esse momento ainda mais especial para vocês dois!',5)">A) "Eu agradeceria pelo carinho, valorizaria o esforço dela e tentaria demonstrar o quanto fiquei feliz por ela ter pensado em mim."</button>
-<button class="btn" onclick="R(4,'💗 — Isso também é importante! O carinho não precisa impedir a sinceridade. Só lembre que existe uma maneira delicada de falar sobre as coisas. Uma conversa gentil pode aproximar vocês ainda mais!',5)">B) "Eu ficaria feliz com a intenção e também diria sinceramente o que achei, sempre com carinho."</button>
-<button class="btn" onclick="R(4,'💗 — AAAAAH! UMA SURPRESA PARA OUTRA SURPRESA! 💗<br><br>Ela sorri, encantada.<br><br>— O mais bonito não é gastar muito ou fazer algo enorme. É perceber o que faz a pessoa que você ama se sentir querida e encontrar maneiras sinceras de demonstrar isso!',5)">C) "Eu tentaria surpreendê-la também, preparando alguma coisa especial para ela em outro momento."</button>
-</div>
-<div class="resposta" id="r4"><p id="t4"></p><button class="btn btn-next" id="n4" onclick="N(5)">Próximo →</button></div>
-</div></div>
-
-<div class="scene" id="s5">
-<div class="img" style="background-image:url('IMG-20261025-WA0073.jpg')"><div class="name" style="background:#ccc;color:#000">🌪️ 5. SANEMI SHINAZUGAWA — E quando vocês dois errarem?</div></div>
-<div class="dialog">
-<p><b>Cenário:</b> Sanemi aparece com os braços cruzados e uma expressão séria.</p>
-<p><b>Sanemi:</b> "Escuta aqui, Richard. Vou fazer uma pergunta importante, então pense antes de responder.<br><br>Você e a Luana vão ter opiniões diferentes em algum momento. Talvez um de vocês entenda uma situação de um jeito, enquanto o outro enxergue tudo de outra maneira. Talvez os dois fiquem chateados e acabem falando coisas que poderiam ter sido explicadas com mais calma.<br><br>Quando isso acontecer, você vai tratar o relacionamento como uma competição para ver quem ganha a discussão ou vai tentar descobrir como vocês podem resolver o problema?<br><br>E não venha dizer que nunca vai errar. Quero saber o que você pretende fazer quando perceber que também teve responsabilidade pelo que aconteceu."</p>
-<div id="c5">
-<button class="btn" onclick="R(5,'🌪️ Sanemi descruza os braços e faz um pequeno aceno.<br><br>— Hmph. Pelo menos você entende que reconhecer um erro não torna ninguém inferior. Quero ver você manter essa postura quando estiver irritado de verdade. É fácil falar quando está tudo tranquilo.',6)">A) "Vou reconhecer minha parte, pedir desculpas quando precisar e escutar o lado dela sem transformar tudo em uma competição."</button>
-<button class="btn" onclick="R(5,'🌪️ — Justo. Você também tem sentimentos e merece ser ouvido. Mas não use isso como desculpa para ignorar o que ela está dizendo. Os dois precisam ter espaço para explicar suas perspectivas e assumir suas responsabilidades.',6)">B) "Vou tentar resolver o problema, mas também quero que ela escute o meu lado e reconheça a parte dela."</button>
-<button class="btn" onclick="R(5,'🌪️ — Pode funcionar. Só não confunda uma pausa com fugir do problema. Se disser que vai voltar para conversar, cumpra a palavra. Resolver uma situação exige coragem dos dois lados.',6)">C) "Se eu perceber que estamos muito nervosos, vou sugerir uma pausa e depois voltar para conversar."</button>
-</div>
-<div class="resposta" id="r5"><p id="t5"></p><button class="btn btn-next" id="n5" onclick="N(6)">Próximo →</button></div>
-</div></div>
-
-<div class="scene" id="s6">
-<div class="img" style="background-image:url('IMG-20261025-WA9728.jpg')"><div class="name" style="background:#ff0055">💚 6. AKAZA — O que faz você continuar escolhendo essa pessoa?</div></div>
-<div class="dialog">
-<p><b>Cenário:</b> Akaza aparece diante de Richard, com o olhar atento e uma expressão desafiadora.</p>
-<p><b>Akaza:</b> "Richard… quero saber uma coisa.<br><br>Muita gente acredita que força significa nunca demonstrar fraqueza, nunca ficar triste e nunca admitir que precisa de alguém. Mas me diga: você realmente acredita que precisa ser perfeito para merecer o amor de outra pessoa?<br><br>Pense na Luana. Ela também tem dias difíceis, pode cometer erros, pode ficar insegura e ainda está aprendendo sobre a vida e sobre si mesma. Você também está aprendendo.<br><br>Se vocês quiserem continuar juntos, vão precisar de mais do que sentimentos bonitos. Vão precisar de respeito, sinceridade, paciência e disposição para crescer.<br><br>Então responda: o que você faria para cuidar desse relacionamento sem esquecer que vocês dois também precisam cuidar de si mesmos?"</p>
-<div id="c6">
-<button class="btn" onclick="R(6,'💚 Akaza observa Richard por alguns instantes.<br><br>— Hm. Você entende que força não é a mesma coisa que perfeição. Se pretende continuar ao lado dela, demonstre isso nas suas atitudes. Palavras podem iniciar uma promessa, mas são as escolhas de todos os dias que mostram o que ela significa para você.',7)">A) "Eu quero continuar escolhendo estar com ela, demonstrar meu amor e aprender com ela, sem exigir que nenhum de nós seja perfeito."</button>
-<button class="btn" onclick="R(6,'💚 — Uma resposta sensata. Um relacionamento não deve apagar a individualidade de ninguém. Se vocês querem construir algo juntos, precisam respeitar os limites um do outro e continuar sendo duas pessoas que escolhem compartilhar a vida.',7)">B) "Quero que a gente consiga conversar sobre nossos limites, nossos sentimentos e o que cada um precisa."</button>
-<button class="btn" onclick="R(6,'💚 — Então não deixe que um momento difícil defina toda a história de vocês. Reconheçam o que precisa mudar, aprendam com o que aconteceu e lembrem-se de que continuar juntos deve ser uma escolha sincera dos dois.',7)">C) "Quero que a gente aprenda a enfrentar os momentos difíceis sem esquecer os motivos pelos quais se ama."</button>
-</div>
-<div class="resposta" id="r6"><p id="t6"></p><button class="btn btn-next" id="n6" onclick="N(7)">Última pergunta - Luana →</button></div>
-</div></div>
-
-<div class="scene" id="s7">
-<div class="img" style="background-image:url('IMG-20261025-WA6959.jpg');height:480px"><div class="name" style="background:#ff4d8a">❤️ 7. A ÚLTIMA PERGUNTA — LUANA APARECE NA TELA</div></div>
-<div class="dialog">
-<div class="final-box">
-<p>Meu amor…<br><br>Se você chegou até aqui, quero que saiba que cada pergunta desta aventura foi preparada pensando em nós dois.<br><br>Eu não preparei isso porque espero que você tenha todas as respostas certas, nem porque acredito que um relacionamento precisa ser perfeito. Eu preparei porque você é importante para mim e porque queria criar uma lembrança diferente, uma coisa que fosse nossa.<br><br>Eu sei que nós dois erramos em alguns momentos. Sei que nem sempre conseguimos explicar tudo o que sentimos da maneira que gostaríamos. Às vezes, podemos ficar chateados, interpretar alguma coisa de forma diferente ou não saber exatamente o que dizer.<br><br>Mas eu não quero que os nossos momentos difíceis sejam as únicas coisas de que nos lembramos. Também quero que a gente se lembre das risadas, das conversas, dos carinhos, dos sonhos que compartilhamos e das pequenas coisas que tornam a nossa história especial.<br><br>Richard, eu amo você. Amo a pessoa que você é, suas qualidades, seu jeito, seus sonhos e as coisas que fazem você ser único para mim. E também quero conhecer cada vez mais a pessoa que você está se tornando.<br><br>Não espero que você seja perfeito. Eu também não sou. Quero que a gente tenha espaço para aprender, para conversar com sinceridade, para reconhecer nossos erros e para demonstrar amor não apenas quando tudo estiver bem, mas também quando precisarmos ter uma conversa difícil.<br><br>Quero ver você feliz, quero conquistar coisas bonitas ao seu lado e quero que você também se sinta amado, respeitado e compreendido comigo.<br><br>Por isso, preparei uma última pergunta. Não existe uma resposta que resolva tudo magicamente. O que importa é o significado que você dá à sua escolha e o que nós dois fazemos depois dela.<br><br><b>Então, meu amor… se você pudesse escolher uma coisa para levar conosco para o futuro, o que escolheria? ❤️</b></p>
-</div>
-<div id="c7">
-<button class="btn" onclick="R(7,'❤️ Luana aparece sorrindo na tela.<br><br>Meu amor, eu também quero isso. Não precisamos saber tudo sobre o futuro agora. Quero que a gente continue aprendendo, cuidando um do outro e construindo nossa história com sinceridade. Obrigada por escolher caminhar comigo. Eu te amo! ❤️',8)">A) "Quero continuar construindo nossa história com amor, respeito, sinceridade e vontade de melhorar juntos."</button>
-<button class="btn" onclick="R(7,'💗 A tela ganha pequenas flores e corações.<br><br>Meu amor, espero que a gente sempre encontre coragem para conversar, mesmo quando for difícil. Não quero que nenhum de nós tenha que esconder o que sente por medo de não ser compreendido. Quero que a gente aprenda a se ouvir cada vez melhor. Eu te amo muito! 💗',
+:root{--blue:#176bb8;--pink:#ff83cd;--gold:#f6d78a}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#080912;color:white;font-family:Arial,Helvetica,sans-serif}button{font:inherit;cursor:pointer}
+#game{min-height:100svh;position:relative;overflow:hidden;background:#090a12}.scene-bg{position:fixed;inset:0;background:radial-gradient(circle at 50% 20%,#563047,#151724 55%,#080912);z-index:0}
+.scene-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;opacity:.96}.scene-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#05060b18 0%,#05060b08 24%,#05060b78 52%,#05060bf5 100%)}
+.fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:25px;font-size:70px}.fallback small{display:block;font-size:12px;letter-spacing:3px;margin-top:10px;color:var(--gold)}
+.top{position:relative;z-index:2;padding:calc(14px + env(safe-area-inset-top)) 17px 10px;display:flex;align-items:center;justify-content:space-between;text-shadow:0 2px 8px #000}.logo{font-weight:800;font-size:10px;letter-spacing:2px;color:#ffe5a5}.chapter{font-size:10px;letter-spacing:1px;color:#f4e8ef;text-transform:uppercase}
+.track{height:3px;background:#ffffff26;position:relative;z-index:2}.track span{height:100%;display:block;width:0;background:linear-gradient(90deg,#ff79c8,#f6d78a);transition:width .3s}
+.layout{position:relative;z-index:1;min-height:calc(100svh - 50px);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(15px,4vw,30px);padding-bottom:calc(18px + env(safe-area-inset-bottom));max-width:760px;margin:auto}.spacer{flex:1;min-height:25vh}
+.tag{align-self:flex-start;border:1px solid #ffffff55;background:#111522d9;padding:9px 13px;border-radius:18px 18px 18px 4px;margin-bottom:10px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#ffe5a5}
+.panel{background:#faf9fcf7;color:#252535;border-radius:16px 16px 7px 7px;padding:20px 18px 17px;box-shadow:0 12px 36px #0008;border:1px solid #ffffffa8}
+.eyebrow{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#a34183;font-weight:800;margin-bottom:9px}h1,h2{margin:0 0 12px;line-height:1.12}h1{font-size:clamp(30px,7vw,45px);color:white;text-shadow:0 3px 18px #000}h1 .pink{color:#ff9bd9}h2{font-size:23px;color:#27263a}
+.copy,.end-copy{font-size:14px;line-height:1.72;white-space:pre-line;margin:0;color:#373646}.choices{display:grid;gap:9px;margin-top:14px}
+.choice{width:100%;text-align:left;display:flex;align-items:flex-start;gap:10px;border:1px solid #3995df;background:linear-gradient(100deg,#1879c7,#07519b);color:white;border-radius:22px;padding:13px 14px;box-shadow:0 4px 0 #043d73;font-size:13px;line-height:1.45}.choice:active{transform:translateY(2px);box-shadow:0 2px 0 #043d73}.choice b{flex:0 0 23px;height:23px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#ffffff25;border:1px solid #ffffff50;font-size:11px}
+.reply{margin-top:13px;font-size:13px;color:#6e365a;line-height:1.65;padding:12px;border-left:3px solid #df7bb7;background:#fff1f8;border-radius:0 8px 8px 0}
+.action{border:0;border-radius:25px;background:linear-gradient(90deg,#ff7dc9,#ffb1dc);color:#35152d;font-weight:800;letter-spacing:.7px;padding:15px 19px;width:100%;margin-top:17px;box-shadow:0 5px 0 #a84482;font-size:12px}.smallnote{text-align:center;color:#f0e4ef;font-size:9px;letter-spacing:1.2px;margin-top:14px;text-shadow:0 2px 8px #000}
+.final-photo{width:100%;max-height:38svh;object-fit:contain;object-position:center;border-radius:12px;margin:0 auto 15px;display:block;filter:drop-shadow(0 6px 18px #0007)}.signature{font-family:Georgia,serif;color:#c13f88;font-size:21px;font-style:italic;margin-top:17px}
+@media(min-width:650px){.layout{justify-content:center}.spacer{min-height:10vh}.panel{padding:25px 28px}.copy,.end-copy{font-size:16px}}
+</style></head>
+<body><div id="game">
+<div class="scene-bg"><img id="bgImage" alt=""><div id="fallback" class="fallback"><div id="fallbackEmoji">⚔️<small>DEMON SLAYER</small></div></div></div>
+<header class="top"><div class="logo">KIMETSU NO YAIBA</div><div class="chapter" id="chapter">MISSÃO ESPECIAL</div></header>
+<div class="track"><span id="progress"></span></div><main class="layout" id="screen"></main></div>
+<script>
+/* Todas as imagens devem estar na mesma pasta que index.html no repositório. */
+const assets={
+ start:"IMG-20261025-WA0073.jpg",
+ tomioka:"IMG-20261025-WA0073.jpg",
+ shinobu:"IMG-20261025-WA0074.jpg",
+ rengoku:"IMG-20261025-WA0075.jpg",
+ mitsuri:"IMG-20261025-WA0076.jpg",
+ sanemi:"IMG-20261025-WA0077.jpg",
+ akaza:"IMG-20261025-WA6959.jpg",
+ luana:"IMG-20261025-WA9728.jpg"
+};
+const story=[
+{id:"start",chapter:"PRÓLOGO",who:"UMA MISSÃO PARA RICHARD",emoji:"🌙",title:'Richard, sua aventura <span class="pink">começa agora.</span>',text:"Os caçadores receberam uma missão muito diferente das outras. Desta vez, não precisam derrotar um oni: precisam descobrir se Richard está pronto para cuidar de uma pessoa muito especial para ele.\n\nSeis personagens vão fazer perguntas. Escolha a resposta que mais combina com você — cada escolha terá uma reação própria.",choices:[["Estou pronto. Pode começar!","next"],["Quero enfrentar essa missão com coragem!","next"],["Só espero que não seja um interrogatório…","next"]]},
+{id:"tomioka",chapter:"PERGUNTA 1 DE 6",who:"GIYU TOMIOKA · HASHIRA DA ÁGUA",emoji:"🌊",title:"Uma conversa séria",text:"Richard, quero conversar com você sobre a Luana. Amar alguém não significa apenas gostar dela quando tudo está tranquilo. Também significa tentar ouvi-la quando está triste, ter paciência quando ela não consegue explicar o que sente e lembrar que vocês estão do mesmo lado, mesmo quando discordam.\n\nImagine que ela esteja tendo um dia difícil, queira conversar com você, mas nem saiba direito como explicar o que está sentindo. O que você faria para que ela se sentisse ouvida e acolhida?",choices:[
+["Eu escutaria com paciência e tentaria entender, sem pressioná-la a explicar tudo de uma vez.","Essa é uma boa resposta. Às vezes, não precisamos resolver tudo imediatamente. Escutar com atenção já é uma forma importante de demonstrar amor. Agora, mostre isso também nas suas atitudes."],
+["Eu tentaria conversar com calma e explicaria que podemos resolver as coisas juntos.","Uma conversa precisa ter espaço para os dois. Escute o que ela sente e também explique o que você sente, sem transformar o problema numa disputa para descobrir quem está certo."],
+["Eu daria um tempinho para nos acalmarmos e depois voltaria para conversar.","Uma pausa pode ajudar, desde que você explique que precisa respirar e combine de voltar à conversa. Não deixe que ela pense que você simplesmente desapareceu quando ela precisava de você."]]},
+{id:"shinobu",chapter:"PERGUNTA 2 DE 6",who:"SHINOBU KOCHO · HASHIRA DO INSETO",emoji:"🦋",title:"Você vai cuidar do coração dela?",text:"Richard, posso fazer uma perguntinha? Prometo tentar não ser assustadora… muito. ♡\n\nA Luana tem sentimentos, inseguranças, sonhos e momentos em que pode precisar de carinho e compreensão. Vocês dois vão cometer erros em algum momento. Imagine que tiveram um desentendimento. Depois, ela percebe que também errou, pede desculpas e tenta se aproximar, mas ainda está com medo de que vocês continuem distantes.\n\nO que você faria para mostrar que deseja resolver as coisas com ela, sem ignorar seus próprios sentimentos?",choices:[
+["Eu conversaria com ela, explicaria o que senti e mostraria que podemos resolver isso sem deixar de nos amar.","Shinobu sorri. — Ora, ora! Uma resposta sensata. O amor não elimina os desentendimentos, mas pode ajudar duas pessoas a enfrentá-los com respeito. Lembre-se: as atitudes precisam acompanhar as palavras. ♡"],
+["Eu daria um tempo para nós dois respirarmos e depois procuraria ela para conversar.","— Uma pausa pode ser útil quando os sentimentos estão intensos. Mas explique isso com carinho, em vez de deixar a outra pessoa sem saber o que acontece. Um pouquinho de clareza pode evitar muita preocupação."],
+["Eu tentaria entender o que realmente aconteceu antes de tirar conclusões sobre ela.","— Excelente! Investigar antes de julgar é importante tanto para um caçador quanto para um namorado. Ouça o lado dela, explique o seu e não transforme uma suposição em certeza."]]},
+{id:"rengoku",chapter:"PERGUNTA 3 DE 6",who:"KYOJURO RENGOKU · HASHIRA DAS CHAMAS",emoji:"🔥",title:"A promessa que você faria",text:"RICHARD! PRESTE BASTANTE ATENÇÃO!\n\nImagine que a Luana olha para o futuro de vocês e tem muitos sonhos no coração. Ela quer construir uma história bonita ao seu lado, viver momentos felizes e superar as dificuldades, mas sabe que a vida não será perfeita e que vocês ainda têm muito a aprender.\n\nQue tipo de namorado você deseja ser para ela? Alguém que faz promessas grandiosas e depois se esquece delas, ou alguém que demonstra amor nas pequenas atitudes de todos os dias?",choices:[
+["Quero demonstrar meu amor nas atitudes, cumprir o que prometo e construir nosso futuro um passo de cada vez.","— EXCELENTE, RICHARD! Uma promessa se torna ainda mais valiosa quando é acompanhada de atitudes! Vocês não precisam planejar todo o futuro agora. Continuem agindo com sinceridade, responsabilidade e coragem!"],
+["Quero fazê-la feliz, mesmo sabendo que não vou conseguir resolver todos os problemas dela.","— MARAVILHOSO! Você não precisa resolver todos os problemas do mundo para ser um bom namorado. Apoiar e caminhar ao lado dela também significa muito. Vocês são parceiros, não salvador e pessoa salva!"],
+["Quero continuar aprendendo a amar melhor, porque sei que ainda tenho coisas para melhorar.","— MAGNÍFICO! Reconhecer que ainda podemos aprender é uma atitude corajosa. Que vocês tenham disposição para conversar, reconhecer os erros e celebrar cada pequena conquista juntos!"]]},
+{id:"mitsuri",chapter:"PERGUNTA 4 DE 6",who:"MITSURI KANROJI · HASHIRA DO AMOR",emoji:"💗",title:"Você vai fazê-la feliz?",text:"Richard, posso fazer uma pergunta sobre a Luana? 💗\n\nImagine que ela preparou uma surpresa para você, passou um tempão pensando em cada detalhe e ficou ansiosa para descobrir sua reação. Talvez não tenha ficado exatamente como ela imaginou, mas foi feita com muito carinho.\n\nE tem mais: fazer a Luana feliz não significa nunca discordar dela. Também significa respeitar os sentimentos dela e permitir que ela conheça os seus. Como você reagiria a essa surpresa e demonstraria que valoriza o carinho dela?",choices:[
+["Eu agradeceria pelo carinho, valorizaria o esforço dela e mostraria que fiquei feliz por ela ter pensado em mim.","— AAAAAH, QUE FOFO! 💗 Você não precisa de uma surpresa perfeita para reconhecer o amor que existe por trás dela. Demonstrar gratidão pode tornar esse momento ainda mais especial!"],
+["Eu ficaria feliz com a intenção e falaria sinceramente o que achei, sempre com carinho.","— Isso também é importante! O carinho não precisa impedir a sinceridade. Existe uma maneira delicada de falar sobre as coisas, e uma conversa gentil pode aproximar vocês ainda mais."],
+["Eu tentaria surpreendê-la também, preparando alguma coisa especial para ela em outro momento.","— UMA SURPRESA PARA OUTRA SURPRESA! 💗 O mais bonito não é gastar muito ou fazer algo enorme. É perceber o que faz a pessoa que você ama se sentir querida."]]},
+{id:"sanemi",chapter:"PERGUNTA 5 DE 6",who:"SANEMI SHINAZUGAWA · HASHIRA DO VENTO",emoji:"🌪️",title:"E quando vocês dois errarem?",text:"Escuta aqui, Richard. Vou fazer uma pergunta importante, então pense antes de responder.\n\nVocê e a Luana podem ter opiniões diferentes. Talvez um entenda uma situação de um jeito, enquanto o outro enxergue de outra maneira. Talvez os dois fiquem chateados e acabem falando coisas que poderiam ter sido explicadas com mais calma.\n\nQuando isso acontecer, você vai tratar o relacionamento como uma competição para ver quem ganha a discussão ou vai tentar descobrir como resolver o problema? Não diga que nunca vai errar. O que pretende fazer quando perceber que também teve responsabilidade?",choices:[
+["Vou reconhecer minha parte, pedir desculpas quando precisar e escutar o lado dela sem transformar tudo numa competição.","Sanemi descruza os braços. — Hmph. Reconhecer um erro não torna ninguém inferior. Quero ver você manter essa postura quando estiver irritado de verdade. É fácil falar quando tudo está tranquilo."],
+["Vou tentar resolver o problema, mas também quero que ela escute meu lado e reconheça a parte dela.","— Justo. Você também tem sentimentos e merece ser ouvido. Mas não use isso como desculpa para ignorar o que ela diz. Os dois precisam ter espaço para explicar suas perspectivas e assumir responsabilidades."],
+["Se estivermos muito nervosos, vou sugerir uma pausa e depois voltar para conversar.","— Pode funcionar. Só não confunda uma pausa com fugir do problema. Se disser que vai voltar para conversar, cumpra a palavra. Resolver uma situação exige coragem dos dois lados."]]},
+{id:"akaza",chapter:"PERGUNTA 6 DE 6",who:"AKAZA · LUA SUPERIOR",emoji:"💚",title:"O que faz você continuar escolhendo-a?",text:"Richard… quero saber uma coisa.\n\nMuita gente acredita que força significa nunca demonstrar fraqueza, nunca ficar triste e nunca admitir que precisa de alguém. Mas você acredita que precisa ser perfeito para merecer amor?\n\nPense na Luana. Ela também tem dias difíceis, pode cometer erros, ficar insegura e ainda está aprendendo sobre a vida e sobre si mesma. Você também está aprendendo. Um relacionamento precisa de respeito, sinceridade, paciência e vontade de crescer.\n\nO que você faria para cuidar desse relacionamento sem esquecer que vocês dois também precisam cuidar de si mesmos?",choices:[
+["Quero continuar escolhendo estar com ela, demonstrar meu amor e aprender com ela, sem exigir perfeição de nenhum de nós.","Akaza observa você por alguns instantes. — Hm. Força não é perfeição. Se pretende continuar ao lado dela, demonstre isso nas suas atitudes. As escolhas de todos os dias mostram o que ela significa para você."],
+["Quero que a gente converse sobre nossos limites, sentimentos e o que cada um precisa.","— Uma resposta sensata. Um relacionamento não deve apagar a individualidade de ninguém. Respeitem os limites um do outro e continuem sendo duas pessoas que escolhem compartilhar a vida."],
+["Quero que a gente enfrente os momentos difíceis sem esquecer os motivos pelos quais se ama.","— Então não deixe que um momento difícil defina toda a história. Reconheçam o que precisa mudar, aprendam com o que aconteceu e lembrem-se de que continuar juntos deve ser uma escolha sincera dos dois."]]},
+{id:"luana",chapter:"SURPRESA FINAL",who:"UMA MENSAGEM DA LUANA ❤️",emoji:"💗",title:"Agora é a minha vez de falar…",text:"Meu amor…\n\nSe você chegou até aqui, quero que saiba que cada pergunta desta aventura foi preparada pensando em nós dois. Eu não fiz isso porque espero que você tenha todas as respostas certas, nem porque acredito que um relacionamento precisa ser perfeito. Preparei porque você é importante para mim e porque queria criar uma lembrança diferente, uma coisa que fosse nossa.\n\nEu sei que nós dois erramos em alguns momentos. Nem sempre conseguimos explicar tudo o que sentimos da maneira que gostaríamos. Às vezes, podemos ficar chateados, interpretar alguma coisa de forma diferente ou não saber exatamente o que dizer.\n\nMas não quero que os nossos momentos difíceis sejam as únicas coisas de que nos lembramos. Também quero que a gente se lembre das risadas, das conversas, dos carinhos, dos sonhos que compartilhamos e das pequenas coisas que tornam a nossa história especial.\n\nRichard, eu amo você. Amo a pessoa que você é, suas qualidades, seu jeito, seus sonhos e as coisas que fazem você ser único para mim. Também quero conhecer cada vez mais a pessoa que você está se tornando.\n\nNão espero que você seja perfeito. Eu também não sou. Quero que a gente tenha espaço para aprender, conversar com sinceridade, reconhecer nossos erros e demonstrar amor não apenas quando tudo estiver bem, mas também quando precisarmos ter uma conversa difícil.\n\nQuero ver você feliz, conquistar coisas bonitas ao seu lado e que você também se sinta amado, respeitado e compreendido comigo.\n\nEntão, meu amor… se você pudesse escolher uma coisa para levar conosco para o futuro, o que escolheria?",choices:[
+["Continuar construindo nossa história com amor, respeito, sinceridade e vontade de melhorar juntos.","Meu amor, eu também quero isso. Não precisamos saber tudo sobre o futuro agora. Quero que a gente continue aprendendo, cuidando um do outro e construindo nossa história com sinceridade. Obrigada por escolher caminhar comigo. Eu te amo! ❤️"],
+["Nunca ter medo de conversar sobre o que sentimos e pedir desculpas quando errarmos.","Meu amor, espero que a gente sempre encontre coragem para conversar, mesmo quando for difícil. Não quero que nenhum de nós esconda o que sente por medo de não ser compreendido. Quero que a gente aprenda a se ouvir cada vez melhor. Eu te amo muito! 💗"],
+["Colecionar lembranças, enfrentar desafios juntos e descobrir novas razões para nos amar.","Meu amor, ainda temos tantas coisas para viver, tantas histórias para contar e tantas lembranças para criar. Não sei exatamente como será cada capítulo do nosso futuro, mas fico feliz por poder compartilhar o presente com você. Quero que a gente cuide da nossa história com carinho. Te amo, Richard! ❤️"]]}
+];
+let index=0,selected=-1,responseText="";
+const screen=document.getElementById("screen"),bg=document.getElementById("bgImage"),fallback=document.getElementById("fallback"),fallbackEmoji=document.getElementById("fallbackEmoji"),chapter=document.getElementById("chapter"),progress=document.getElementById("progress");
+function setBg(s){
+ fallback.style.display="none";bg.style.display="block";
+ bg.onerror=()=>{bg.style.display="none";fallback.style.display="flex";fallbackEmoji.innerHTML=(s.emoji||"⚔️")+"<small>"+s.who+"</small>";};
+ bg.src=assets[s.id]||assets.tomioka;bg.alt=s.who;chapter.textContent=s.chapter;progress.style.width=(index/(story.length-1)*100)+"%";
+}
+function esc(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function next(){index=Math.min(index+1,story.length-1);selected=-1;responseText="";render();window.scrollTo(0,0)}
+function choose(n){selected=n;responseText=story[index].choices[n][1];render()}
+function restart(){index=0;selected=-1;responseText="";render();window.scrollTo(0,0)}
+function render(){
+ const s=story[index],intro=index===0,last=index===story.length-1;setBg(s);
+ let h='<div class="spacer"></div>';
+ if(intro){
+ h+=`<div class="eyebrow" style="color:#ffb3df">✦ UMA HISTÓRIA ESPECIAL ✦</div><h1>${s.title}</h1><div class="panel"><div class="eyebrow">${s.who}</div><p class="copy">${esc(s.text)}</p><button class="action" onclick="next()">COMEÇAR A MISSÃO →</button></div><div class="smallnote">FEITO COM CARINHO POR LUANA ♥</div>`;
+ }else if(last){
+ h+=`<div class="tag">${s.who}</div><div class="panel"><div class="eyebrow">${s.chapter}</div><h2>${s.title}</h2><img class="final-photo" src="${assets.luana}" alt="Luana" onerror="this.style.display='none'"><p class="end-copy">${esc(s.text)}</p>`;
+ if(selected<0){h+='<div class="choices">'+s.choices.map((c,i)=>`<button class="choice" onclick="choose(${i})"><b>${String.fromCharCode(65+i)}</b><span>${esc(c[0])}</span></button>`).join('')+'</div>'}
+ else{h+=`<div class="reply">${esc(responseText)}</div><div class="signature">Com carinho, Luana ♥️</div><button class="action" onclick="restart()">VOLTAR AO INÍCIO ↻</button>`}
+ h+='</div><div class="smallnote">A NOSSA HISTÓRIA CONTINUA ❤️</div>';
+ }else{
+ h+=`<div class="tag">${s.who
